@@ -37,15 +37,21 @@ Biginner Cybersecurity and Kali Linux Tutorials
     <img src="./kibeere%20cyber.jpg"
          alt="Cybersecurity education">
 
-    <im```html
-<img
-  src="./kibeere%20cybere.jpg"
-  alt="Computer security and technology"
-  style="width:100%; max-width:450px; height:auto; border-radius:12px;"
->
-```g src="./kibeere%20cybere.jpg"
+  
          alt="Computer security and technology">
   </div>
+<div class="cybersecurity-images">
+  <img
+    src="./kibeere%20cyber.jpg"
+    alt="Kibeere Cyber Security Academy"
+  >
+
+  <img
+    src="./kibeere%20cybere.jpg"
+    alt="Cybersecurity education and technology"
+  >
+</div>
+
 </section>
 
 <style>
