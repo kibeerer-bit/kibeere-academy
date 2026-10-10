@@ -65,7 +65,22 @@ Biginner Cybersecurity and Kali Linux Tutorials
   .whatsapp-button:hover {
     background: #1da851;
   }
-</style>
+</style>```css
+.whatsapp-button {
+  display: inline-block;
+  background: #25D366;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.whatsapp-button:hover {
+  background: #1da851;
+}
+```
 </style>
 </section>
 </main>
