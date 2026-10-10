@@ -29,7 +29,35 @@ Biginner Cybersecurity and Kali Linux Tutorials
   >
     Chat with Us on WhatsApp
   </a>
+</section>```html
+<section class="image-gallery">
+  <h2>Explore Cybersecurity</h2>
+
+  <div class="gallery-images">
+    <img src="./kibeere%20cyber.jpg"
+         alt="Cybersecurity education">
+
+    <img src="./kibeere%20cybere.jpg"
+         alt="Computer security and technology">
+  </div>
 </section>
+
+<style>
+  .gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .gallery-images img {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+</style>
+```
 
 <style>
   .contact-section {
