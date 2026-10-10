@@ -3,6 +3,44 @@ Biginner Cybersecurity and Kali Linux Tutorials
 
 <!-- LOCATION & CONTACT SECTION -->
 <section id="contact" class="contact-section">
+</section>
+
+<!-- TUTORING SECTION -->
+<section id="tutoring" class="contact-section">
+  <h2>Learn with Kibeere Academy</h2>
+
+  <p>
+    Learn computer networking, Linux fundamentals,
+    and cybersecurity basics through beginner-friendly
+    lessons and practical exercises.
+  </p>
+
+  <h3>Our Lessons</h3>
+
+  <ul>
+    <li>Linux fundamentals</li>
+    <li>Computer networking basics</li>
+    <li>Password security and online safety</li>
+    <li>Introduction to ethical cybersecurity</li>
+  </ul>
+
+  <h3>Beginner Tutoring Prices</h3>
+
+  <p>30-minute lesson: UGX 5,000–10,000</p>
+  <p>60-minute lesson: UGX 15,000–25,000</p>
+
+  <p>Contact us on WhatsApp to book a lesson.</p>
+
+  <a
+    href="https://wa.me/256749668437?text=Hello%20Kibeere%20Academy%2C%20I%20want%20to%20book%20a%20lesson."
+    target="_blank"
+    rel="noopener noreferrer"
+    style="display:inline-block;background:#16834a;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;"
+  >
+    Book a Lesson on WhatsApp
+  </a>
+</section>
+
   <h2>Location & Contact Us</h2>
 
   <h3>Kibeere Cyber Security Academy</h3>
