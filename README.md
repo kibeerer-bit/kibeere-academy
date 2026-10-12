@@ -19,7 +19,7 @@
       color: #f1f5f9;
       font-family: Arial, sans-serif;
       line-height: 1.7;
-    }
+    }<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "5b0ab2be0c984010b3909a8a2a556d88"}'></script><!-- End Cloudflare Web Analytics -->
 
     header {
       padding: 40px 20px;
