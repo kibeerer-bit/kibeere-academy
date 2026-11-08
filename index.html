@@ -1,301 +1,693 @@
 
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Kibeere Cyber Security Academy</title>
-  <meta name="description" content="Learn Linux fundamentals, computer networking, cybersecurity and online safety with Kibeere Academy.">
+  <title>Kibeere Cybersecurity Academy | Learn, Protect & Secure</title>
+
+  <meta name="description" content="Learn cybersecurity, Kali Linux, networking, online privacy and digital safety. Explore security tools, honest product reviews and beginner-friendly tutorials.">
+
+  <meta name="keywords" content="cybersecurity, Kali Linux, ethical hacking, VPN reviews, password security, Linux tutorials, online safety">
+
+  <meta name="author" content="Kibeere Cybersecurity Academy">
+  <meta name="theme-color" content="#07111f">
+
+  <!-- Cloudflare Web Analytics -->
+  <script
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon='{"token": "5b0ab2be0c984010b3909a8a2a556d88"}'>
+  </script>
+  <!-- End Cloudflare Web Analytics -->
 
   <style>
     * {
       box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --background: #07111f;
+      --surface: #101e30;
+      --surface-light: #17283c;
+      --green: #22c55e;
+      --cyan: #38bdf8;
+      --text: #f1f5f9;
+      --muted: #a9b8ca;
+    }
+
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
-      margin: 0;
-      background: #07111f;
-      color: #f1f5f9;
+      background: var(--background);
+      color: var(--text);
       font-family: Arial, sans-serif;
       line-height: 1.7;
     }
 
-    header {
-      padding: 40px 20px;
+    a {
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      background: #0b1728;
+      border-bottom: 1px solid #24364b;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-content {
+      min-height: 75px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      padding: 15px 0;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--green);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: var(--green);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 90px;
       text-align: center;
-      background: #101c2c;
+      background:
+        radial-gradient(ellipse at top, #153b42 0%, transparent 65%),
+        var(--background);
     }
 
-    header h1,
-    h2 {
-      color: #38bdf8;
+    .hero-label {
+      color: var(--green);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 13px;
     }
 
-    section {
+    .hero h1 {
+      font-size: clamp(35px, 6vw, 62px);
+      line-height: 1.15;
+      margin: 22px auto;
       max-width: 850px;
-      margin: 28px auto;
-      padding: 28px 20px;
-      border-radius: 12px;
-      background: #101c2c;
     }
 
-    a.button {
+    .hero h1 span {
+      color: var(--green);
+    }
+
+    .hero p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 28px;
+      font-size: 17px;
+    }
+
+    .button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 12px 20px;
-      border-radius: 8px;
-      background: #16834a;
-      color: white;
+      padding: 13px 23px;
+      border-radius: 7px;
+      background: var(--green);
+      color: #07111f;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 7px;
+      transition: 0.2s;
+    }
+
+    .button:hover {
+      background: #4ade80;
+      transform: translateY(-2px);
+    }
+
+    .button-outline {
+      background: transparent;
+      border: 1px solid var(--green);
+      color: var(--green);
+    }
+
+    .button-outline:hover {
+      color: #07111f;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 70px 0;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 38px;
+    }
+
+    .section-heading h2 {
+      font-size: 32px;
+      color: var(--cyan);
+      margin-bottom: 10px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid #24364b;
+      padding: 26px;
+      border-radius: 12px;
+      transition: 0.25s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: var(--green);
+    }
+
+    .card .icon {
+      font-size: 32px;
+      margin-bottom: 14px;
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: var(--green);
+    }
+
+    .card p {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .card a {
+      display: inline-block;
+      color: var(--cyan);
+      margin-top: 15px;
       text-decoration: none;
       font-weight: bold;
     }
 
-    a.button:hover {
-      background: #1da851;
+    /* FEATURE AREA */
+
+    .feature {
+      background: var(--surface);
+      border-radius: 14px;
+      padding: 35px;
+      border: 1px solid #24364b;
     }
 
-    .gallery-images {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
+    .feature h2 {
+      color: var(--green);
+      margin-bottom: 15px;
     }
 
-    .gallery-images img {
-      display: block;
+    .feature p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    .feature ul {
+      padding-left: 22px;
+      color: var(--muted);
+    }
+
+    /* GALLERY */
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .gallery img {
       width: 100%;
-      max-width: 350px;
-      height: auto;
-      border-radius: 10px;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 1px solid #24364b;
     }
+
+    /* CONTACT */
+
+    .contact {
+      text-align: center;
+      background: #102b2b;
+      border-radius: 14px;
+      padding: 45px 20px;
+    }
+
+    .contact h2 {
+      color: var(--green);
+      margin-bottom: 12px;
+    }
+
+    .contact p {
+      color: var(--muted);
+      margin-bottom: 15px;
+    }
+
+    /* FOOTER */
 
     footer {
-      padding: 20px;
+      background: #050c16;
+      border-top: 1px solid #24364b;
+      padding: 35px 0;
       text-align: center;
-      color: #cbd5e1;
     }
 
-    @media (max-width: 600px) {
-      section {
-        margin: 18px 12px;
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 18px 0;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .footer-links a:hover {
+      color: var(--green);
+    }
+
+    footer p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
       }
 
-      .gallery-images img {
-        max-width: 100%;
+      .nav-content {
+        justify-content: center;
+      }
+
+      .nav-links {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .grid,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 37px;
+      }
+
+      .section {
+        padding: 48px 0;
       }
     }
   </style>
 </head>
 
 <body>
-  <header>
-    <h1>Kibeere Cyber Security Academy</h1>
-    <p>Beginner Cybersecurity and Kali Linux Tutorials</p>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-content">
+
+      <a href="index.html" class="logo">
+        🛡 KIBEERE ACADEMY
+      </a>
+
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="tools.html">Security Tools</a>
+        <a href="vpn-reviews.html">VPN Reviews</a>
+        <a href="hosting-reviews.html">Hosting</a>
+        <a href="about.html">About</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+
+      <div class="hero-label">
+        Learn • Protect • Secure • Grow
+      </div>
+
+      <h1>
+        Build Your Digital Future with
+        <span>Cybersecurity Knowledge</span>
+      </h1>
+
+      <p>
+        Discover cybersecurity, ethical hacking, Linux,
+        networking and online privacy through practical
+        tutorials, useful resources and independent
+        technology reviews.
+      </p>
+
+      <a href="tutorials.html" class="button">
+        Explore Tutorials
+      </a>
+
+      <a href="tools.html" class="button button-outline">
+        Discover Security Tools
+      </a>
+
+    </div>
   </header>
 
   <main>
-    <section id="tutoring">
-      <h2>Learn with Kibeere Academy</h2>
 
-      <p>
-        Learn computer networking, Linux fundamentals,
-        and cybersecurity basics through beginner-friendly
-        lessons and practical exercises.
-      </p>
+    <!-- LEARNING -->
+    <section class="section">
+      <div class="container">
 
-      <h3>Our Lessons</h3>
-      <ul>
-        <li>Linux fundamentals</li>
-        <li>Computer networking basics</li>
-        <li>Password security and online safety</li>
-        <li>Introduction to ethical cybersecurity</li>
-      </ul>
+        <div class="section-heading">
+          <h2>Explore Cybersecurity</h2>
+          <p>Practical knowledge for beginners and technology enthusiasts.</p>
+        </div>
 
-      <h3>Beginner Tutoring Prices</h3>
-      <p>30-minute lesson: UGX 5,000–10,000</p>
-      <p>60-minute lesson: UGX 15,000–25,000</p>
+        <div class="grid">
 
-      <p>Contact us on WhatsApp to book a lesson.</p>
+          <article class="card">
+            <div class="icon">🐧</div>
+            <h3>Linux & Kali Linux</h3>
+            <p>
+              Learn Linux commands, terminal basics,
+              system administration and ethical
+              security testing.
+            </p>
+            <a href="tutorials.html">Start learning →</a>
+          </article>
 
-      <a
-        class="button"
-        href="https://wa.me/256749668437?text=Hello%20Kibeere%20Academy%2C%20I%20want%20to%20book%20a%20lesson."
-        target="_blank"
-        rel="noopener noreferrer"
-      >Book a Lesson on WhatsApp</a>
-    </section>
+          <article class="card">
+            <div class="icon">🌐</div>
+            <h3>Computer Networking</h3>
+            <p>
+              Understand IP addresses, DNS, networks,
+              protocols and how computers communicate.
+            </p>
+            <a href="tutorials.html">Explore networking →</a>
+          </article>
 
-    <section id="contact">
-      <h2>Location &amp; Contact Us</h2>
+          <article class="card">
+            <div class="icon">🔐</div>
+            <h3>Online Security</h3>
+            <p>
+              Discover password protection, phishing
+              prevention, privacy and digital safety.
+            </p>
+            <a href="tutorials.html">Learn online safety →</a>
+          </article>
 
-      <h3>Kibeere Cyber Security Academy</h3>
-      <p><strong>Location:</strong> Kampala, Uganda</p>
-
-      <p>
-        We offer online learning in ethical hacking,
-        cybersecurity, and digital safety.
-      </p>
-
-      <p>
-        Have questions about our courses?
-        Contact us on WhatsApp.
-      </p>
-
-      <a
-        class="button"
-        href="https://wa.me/256749668437"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Chat with Us on WhatsApp</a>
-    </section>
-
-    <section class="image-gallery">
-      <h2>Explore Cybersecurity</h2>
-
-      <div class="gallery-images">
-        <img
-          src="./kibeere%20cyber.jpg"
-          alt="Kibeere Cyber Security Academy"
-          loading="lazy"
-        >
-
-        <img
-          src="./kibeere%20cybere.jpg"
-          alt="Cybersecurity education and technology"
-          loading="lazy"
-        >
+        </div>
       </div>
     </section>
+
+    <!-- AFFILIATE RESOURCES -->
+    <section class="section" style="background:#0b1728;">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Cybersecurity Tools & Resources</h2>
+          <p>
+            Explore security products and technology services
+            that can help protect your digital life.
+          </p>
+        </div>
+
+        <div class="grid">
+
+          <article class="card">
+            <div class="icon">🛡️</div>
+            <h3>VPN Reviews</h3>
+            <p>
+              Learn about VPN privacy, encryption,
+              security features, performance and pricing.
+            </p>
+            <a href="vpn-reviews.html">Explore VPN reviews →</a>
+          </article>
+
+          <article class="card">
+            <div class="icon">🔑</div>
+            <h3>Password Managers</h3>
+            <p>
+              Understand password managers, secure
+              password storage and account protection.
+            </p>
+            <a href="password-managers.html">Explore password tools →</a>
+          </article>
+
+          <article class="card">
+            <div class="icon">💻</div>
+            <h3>Web Hosting</h3>
+            <p>
+              Compare hosting technologies, website
+              performance, security and hosting plans.
+            </p>
+            <a href="hosting-reviews.html">Compare hosting →</a>
+          </article>
+
+          <article class="card">
+            <div class="icon">🔍</div>
+            <h3>Security Software</h3>
+            <p>
+              Explore firewalls, antivirus solutions,
+              monitoring tools and security software.
+            </p>
+            <a href="tools.html">Discover security tools →</a>
+          </article>
+
+          <article class="card">
+            <div class="icon">⚖️</div>
+            <h3>Product Comparisons</h3>
+            <p>
+              Understand the differences between
+              technology products before choosing.
+            </p>
+            <a href="comparisons.html">View comparisons →</a>
+          </article>
+
+          <article class="card">
+            <div class="icon">📚</div>
+            <h3>Free Learning Resources</h3>
+            <p>
+              Discover useful educational materials
+              for developing your cybersecurity skills.
+            </p>
+            <a href="tutorials.html">Browse learning resources →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section">
+      <div class="container">
+
+        <div class="feature">
+          <h2>About Kibeere Cybersecurity Academy</h2>
+
+          <p>
+            Kibeere Cybersecurity Academy is an educational
+            platform focused on making cybersecurity and
+            technology easier to understand.
+          </p>
+
+          <p>
+            Our mission is to help individuals develop
+            practical digital skills, understand online
+            threats and make informed technology decisions.
+          </p>
+
+          <ul>
+            <li>Beginner-friendly cybersecurity education</li>
+            <li>Linux and networking tutorials</li>
+            <li>Online privacy and security guidance</li>
+            <li>Independent technology reviews</li>
+            <li>Useful security product comparisons</li>
+          </ul>
+
+          <a href="about.html" class="button">
+            Learn More About Us
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- IMAGE GALLERY -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Explore Our Academy</h2>
+          <p>Technology, cybersecurity and digital education.</p>
+        </div>
+
+        <div class="gallery">
+          <img
+            src="./kibeere%20cyber.jpg"
+            alt="Kibeere Cyber Security Academy"
+            loading="lazy"
+          >
+
+          <img
+            src="./kibeere%20cybere.jpg"
+            alt="Cybersecurity education and technology"
+            loading="lazy"
+          >
+        </div>
+
+      </div>
+    </section>
+
+    <!-- TUTORING -->
+    <section class="section" style="background:#0b1728;">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Beginner Cybersecurity Tutoring</h2>
+          <p>Learn technology through guided online lessons.</p>
+        </div>
+
+        <div class="feature">
+
+          <h2>Our Lesson Packages</h2>
+
+          <p>30-minute lesson: UGX 5,000–10,000</p>
+          <p>60-minute lesson: UGX 15,000–25,000</p>
+
+          <p>
+            Topics include Linux fundamentals,
+            networking, cybersecurity basics
+            and online safety.
+          </p>
+
+          <a
+            class="button"
+            href="https://wa.me/256749668437?text=Hello%20Kibeere%20Academy%2C%20I%20want%20to%20book%20a%20lesson."
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Book a Lesson on WhatsApp
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section">
+      <div class="container">
+
+        <div class="contact">
+          <h2>Let's Connect</h2>
+
+          <p>
+            Have a question, business opportunity,
+            partnership proposal or learning enquiry?
+            We would like to hear from you.
+          </p>
+
+          <a
+            class="button"
+            href="https://wa.me/256749668437"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Contact Us on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; Kibeere Cyber Security Academy</p>
+    <div class="container">
+
+      <a href="index.html" class="logo">
+        🛡 KIBEERE CYBERSECURITY ACADEMY
+      </a>
+
+      <div class="footer-links">
+        <a href="about.html">About</a>
+        <a href="tutorials.html">Tutorials</a>
+        <a href="tools.html">Security Tools</a>
+        <a href="contact.html">Contact</a>
+        <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+      </div>
+
+      <p>
+        Independent cybersecurity education and technology resources.
+      </p>
+
+      <p>
+        &copy; 2026 Kibeere Cybersecurity Academy.
+        All rights reserved.
+      </p>
+
+    </div>
   </footer>
+
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Beginner-friendly cybersecurity lessons and hands-on Kali Linux tutorials by Kibeere.">
-<meta name="google-site-verification" content="Cm3nqfRQ1GKpz6gflE-AqUnxya8LDLAvAHtfMZ1tIYg">
-<title>Kibeere Cybersecurity Academy</title>
-<style>
-body{margin:0;background:#0b1220;color:#e5edf8;font:16px Arial;line-height:1.7}
-header,main,footer{padding:25px;max-width:950px;margin:auto}
-header{border-bottom:1px solid #334155}
-h1,h2{color:#67e8f9}
-.hero{padding:35px 0}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#172338;padding:20px;border-radius:12px}
-a{color:#67e8f9}
-.button{display:inline-block;background:#0891b2;color:white;padding:10px 16px;border-radius:7px;text-decoration:none}
-small{color:#b6c5d9}
-</style>```html
-<section class="image-gallery">
-  <h2>Explore Cybersecurity</h2>
-  <p>Discover cybersecurity, computer safety, and digital protection with Kibeere Cyber Security Academy.</p>
-
-  <img
-    src="kibeere%20cyber.jpg"
-    alt="Cybersecurity education at Kibeere Academy"
-    style="width:100%; max-width:700px; height:auto; border-radius:12px; margin-bottom:20px;"
-  >
-
-  <img
-    src="kibeere%20cybere.jpg"
-    alt="Computer security and technology"
-    style="width:100%; max-width:700px; height:auto; border-radius:12px;"
-  >
-</section>
 ```
-</head>
-<body>
-<header>```html
-<nav>
-  <a href="#home">Home</a>
-  <a href="#courses">Learning Paths</a>
-  <a href="#contact">Contact Us</a>
-</nav>
-
-<h1>Kibeere Cybersecurity Academy</h1>
-<p>Learn cybersecurity. Practise ethically. Build your skills.</p>
-</header><header id="home"><h2 id="courses">Learning Paths</h2>
-<main>
-<section class="hero">
-<h2>Start your cybersecurity journey</h2>
-<p>Practical lessons for complete beginners learning Linux,
-networking, online safety and ethical hacking in authorised labs.</p>
-<a class="button" href="lessons/linux-basics.html">Start your first lesson</a>
-</section>
-<h2>Learning paths</h2>
-<div class="grid">
-<article class="card">
-<h3>Linux Fundamentals</h3>
-<p>Learn terminal commands, files and permissions.</p>
-<a href="lessons/linux-basics.html">Read lesson</a>
-</article>
-<article class="card">
-<h3>Networking Basics</h3>
-<p>Understand IP addresses, ports, DNS and HTTP.</p>
-<p>Coming soon</p>
-</article>
-<article class="card">
-<h3>Ethical Web Security</h3>
-<p>Discover web security through authorised practice labs.</p>
-<p>Coming soon</p>
-</article>
-</div>
-<h2>Recommended learning resources</h2>
-<p>We will share useful books, courses and tools, including
-free resources for beginners.</p>
-<p>Some future links may be affiliate links. If you buy through
-a qualifying link, we may earn a commission at no extra cost
-to you.</p>
-</main>
-<footer>
-<hr>
-<p>Kibeere Cybersecurity Academy</p>
-<p>Educational content only. Practise security testing only on
-systems you own or have explicit permission to test.</p>
-</footer>
-</body>
-
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>
-    Have questions about our cybersecurity lessons?
-    Contact Kibeere Cybersecurity Academy. We welcome
-    beginners who want to learn cybersecurity responsibly.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <h3>📍 Our Location</h3>
-      <p>Kampala, Uganda</p>
-      <p>Online cybersecurity training and learning resources.</p>
-      <a href="https://www.google.com/maps/search/?api=1&query=Kampala%2C+Uganda"
-         target="_blank" rel="noopener noreferrer">
-        Find Kampala on Google Maps
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>💬 WhatsApp</h3>
-      <p>Contact us directly for questions about our lessons.</p>
-      <a class="button"
-         href="https://wa.me/256749668437"
-         target="_blank" rel="noopener noreferrer">
-        Chat with us on WhatsApp
-      </a>
-    </article>
-
-    <article class="card">
-      <h3>🎓 Learning Support</h3>
-      <p>Interested in Linux, networking, or ethical web security?</p>
-      <p>Reach out to learn more about our beginner-friendly content.</p>
-    </article>
-  </div>
-</section>
-```</html>
