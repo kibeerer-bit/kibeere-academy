@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Cybersecurity Tools | Kibeere Cybersecurity Academy</title>
+<meta name="description" content="Explore cybersecurity software, antivirus protection, firewalls, network monitoring, vulnerability assessment and digital security tools.">
+
+<style>
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b1220;
+    color: #e5e7eb;
+    line-height: 1.7;
+}
+header, footer {
+    background: #111c30;
+    padding: 22px 8%;
+}
+header { border-bottom: 2px solid #16a34a; }
+header h2 { color: #22c55e; margin: 0; }
+nav { margin-top: 15px; }
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-right: 12px;
+    font-size: 14px;
+}
+nav a:hover { color: #22c55e; }
+.hero {
+    padding: 65px 8%;
+    text-align: center;
+    background: linear-gradient(135deg, #111c30, #123c32);
+}
+.hero h1 { color: #22c55e; font-size: 36px; }
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 25px 20px;
+}
+.card {
+    background: #142238;
+    padding: 25px;
+    margin: 22px 0;
+    border: 1px solid #263b54;
+    border-radius: 12px;
+}
+h2, h3 { color: #22c55e; }
+a { color: #86efac; }
+.button {
+    display: inline-block;
+    background: #16a34a;
+    color: white;
+    text-decoration: none;
+    padding: 10px 17px;
+    border-radius: 6px;
+    margin-top: 8px;
+}
+.notice {
+    background: #1e293b;
+    border-left: 4px solid #22c55e;
+    padding: 15px;
+}
+footer {
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+}
+@media(max-width:650px) {
+    .hero h1 { font-size: 28px; }
+    nav a { display: inline-block; margin: 5px; }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>Kibeere Cybersecurity Academy</h2>
+<nav>
+<a href="index.html">Home</a>
+<a href="tutorials.html">Tutorials</a>
+<a href="tools.html">Security Tools</a>
+<a href="vpn-reviews.html">VPN Reviews</a>
+<a href="password-managers.html">Password Managers</a>
+<a href="comparisons.html">Comparisons</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Cybersecurity Tools and Software</h1>
+<p>Discover software and technologies that help protect computers, networks, websites and personal information.</p>
+</section>
+
+<main class="container">
+
+<section class="card">
+<h2>Welcome to Our Security Tools Centre</h2>
+
+<p>
+Kibeere Cybersecurity Academy provides educational information
+about cybersecurity applications, software and digital protection
+technologies. Our objective is to help beginners, students,
+professionals and businesses understand the tools available
+for improving their digital security.
+</p>
+
+<p>
+Modern technology makes communication, education, business
+and online services easier. However, these activities also
+introduce security challenges such as malware, phishing,
+unauthorised access, data theft and network attacks.
+</p>
+
+<p>
+Our security tools centre explores different categories of
+software, explains their purposes and provides links to
+official resources where readers can learn more.
+</p>
+
+<h3>What You Will Discover</h3>
+<ul>
+<li>Antivirus and endpoint protection software.</li>
+<li>Firewalls and network security technologies.</li>
+<li>Network monitoring and packet analysis tools.</li>
+<li>Vulnerability assessment software.</li>
+<li>Password and account protection solutions.</li>
+<li>VPN and internet privacy services.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>1. Antivirus Software</h2>
+<p>
+Antivirus software helps detect, prevent and remove malicious
+programmes such as viruses, spyware, trojans and ransomware.
+It is an important part of protecting supported computers.
+</p>
+
+<h3>Examples</h3>
+<ul>
+<li><a href="https://www.microsoft.com/en-us/windows/comprehensive-security" target="_blank" rel="noopener noreferrer">Microsoft Defender</a> – built-in Windows security protection.</li>
+<li><a href="https://www.bitdefender.com/" target="_blank" rel="noopener noreferrer">Bitdefender</a> – antivirus and security products.</li>
+<li><a href="https://www.avast.com/" target="_blank" rel="noopener noreferrer">Avast</a> – consumer security software.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>2. Firewalls</h2>
+<p>
+Firewalls control incoming and outgoing network traffic
+according to configured security rules. They help prevent
+unwanted network connections.
+</p>
+
+<h3>Examples</h3>
+<ul>
+<li><a href="https://www.pfsense.org/" target="_blank" rel="noopener noreferrer">pfSense</a> – firewall and routing platform.</li>
+<li><a href="https://opnsense.org/" target="_blank" rel="noopener noreferrer">OPNsense</a> – open-source firewall software.</li>
+<li><a href="https://www.microsoft.com/" target="_blank" rel="noopener noreferrer">Microsoft Security</a> – Windows security resources.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>3. Network Monitoring and Analysis</h2>
+<p>
+Network monitoring tools help administrators understand
+network traffic, investigate connection problems and identify
+unusual activity.
+</p>
+
+<h3>Examples</h3>
+<ul>
+<li><a href="https://www.wireshark.org/" target="_blank" rel="noopener noreferrer">Wireshark</a> – network packet analysis.</li>
+<li><a href="https://www.zabbix.com/" target="_blank" rel="noopener noreferrer">Zabbix</a> – infrastructure and network monitoring.</li>
+<li><a href="https://www.ntop.org/" target="_blank" rel="noopener noreferrer">ntop</a> – network traffic monitoring.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>4. Vulnerability Assessment Tools</h2>
+<p>
+Vulnerability assessment tools help identify potential
+weaknesses in computer systems, applications and networks.
+Their results can help administrators improve security.
+</p>
+
+<h3>Examples</h3>
+<ul>
+<li><a href="https://nmap.org/" target="_blank" rel="noopener noreferrer">Nmap</a> – network discovery and security auditing.</li>
+<li><a href="https://www.tenable.com/products/nessus" target="_blank" rel="noopener noreferrer">Nessus</a> – vulnerability scanning.</li>
+<li><a href="https://www.openvas.org/" target="_blank" rel="noopener noreferrer">OpenVAS</a> – vulnerability assessment technology.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>5. Password and Account Security</h2>
+<p>
+Password managers help users create and manage strong,
+unique passwords. Multi-factor authentication adds another
+layer of protection to online accounts.
+</p>
+<p>
+Read our <a href="password-managers.html">Password Manager Guide</a>
+to understand popular password management services.
+</p>
+</section>
+
+<section class="card">
+<h2>6. VPN and Privacy Tools</h2>
+<p>
+VPN services can encrypt supported internet traffic between
+a user's device and a VPN server. They may provide additional
+privacy features when browsing online.
+</p>
+<p>
+Explore our <a href="vpn-reviews.html">VPN Reviews and Comparisons</a>
+to learn about selected VPN providers.
+</p>
+</section>
+
+<section class="card">
+<h2>How to Choose Security Software</h2>
+<ul>
+<li>Identify the security problem you want to solve.</li>
+<li>Check software compatibility with your device.</li>
+<li>Compare free and paid features.</li>
+<li>Read the provider's privacy policy.</li>
+<li>Research independent security assessments.</li>
+<li>Check update frequency and customer support.</li>
+<li>Download applications from official sources.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>Responsible Use of Security Tools</h2>
+<div class="notice">
+Only scan, monitor or test computers and networks that
+you own or have explicit permission to assess. Use
+cybersecurity software responsibly and respect other
+people's privacy.
+</div>
+</section>
+
+<section class="card">
+<h2>Independent Research and Affiliate Transparency</h2>
+<p>
+Our educational content is based on publicly available
+product documentation, provider information and research.
+We aim to explain product features, limitations, technical
+requirements and subscription conditions.
+</p>
+<p>
+Kibeere Cybersecurity Academy may participate in affiliate
+programmes. If we receive approval from a provider, some
+links may earn us a commission from eligible purchases
+without increasing the visitor's purchase price.
+</p>
+<p>
+Affiliate relationships do not guarantee positive reviews.
+Read our <a href="affiliate-disclosure.html">Affiliate Disclosure</a>.
+</p>
+</section>
+
+<section class="card">
+<h2>Continue Learning</h2>
+<p>
+<a href="tutorials.html">Cybersecurity Tutorials</a><br>
+<a href="vpn-reviews.html">VPN Reviews</a><br>
+<a href="password-managers.html">Password Managers</a><br>
+<a href="comparisons.html">Product Comparisons</a><br>
+<a href="contact.html">Contact Our Academy</a>
+</p>
+</section>
+
+</main>
+
+<footer>
+<p>&copy; 2026 Kibeere Cybersecurity Academy. All rights reserved.</p>
+<a href="about.html">About</a> |
+<a href="contact.html">Contact</a> |
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+</footer>
+
+</body>
+</html>
