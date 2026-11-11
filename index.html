@@ -724,5 +724,160 @@
     </div>
   </footer>
 
+<!-- KIBEERE CYBERSECURITY ACADEMY - ANIMATED CYBER GLOBE -->
+<style>
+#kibeere-cyber-globe {
+  width: 100%;
+  max-width: 480px;
+  height: 420px;
+  margin: 25px auto;
+  position: relative;
+  background: radial-gradient(circle, #082b50 0%, #020817 70%);
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+#kibeere-cyber-globe canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+</style>
+
+<div id="kibeere-cyber-globe"
+     aria-label="Animated cybersecurity globe">
+  <canvas id="kibeere-globe-canvas"></canvas>
+</div>
+
+<script>
+(() => {
+  const container = document.getElementById(
+    "kibeere-cyber-globe"
+  );
+  const canvas = document.getElementById(
+    "kibeere-globe-canvas"
+  );
+  const ctx = canvas.getContext("2d");
+
+  if (!ctx) return;
+
+  let width, height, points = [];
+  let animationId;
+
+  function resize() {
+    const rect = container.getBoundingClientRect();
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    width = rect.width;
+    height = rect.height;
+
+    canvas.width = width * dpr;
+    canvas.height = height * dpr;
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+    createGlobe();
+  }
+
+  function createGlobe() {
+    points = [];
+    const count = 650;
+
+    for (let i = 0; i < count; i++) {
+      const y = 1 - (i / (count - 1)) * 2;
+      const radius = Math.sqrt(1 - y * y);
+      const angle = Math.PI * (3 - Math.sqrt(5)) * i;
+
+      points.push({
+        x: Math.cos(angle) * radius,
+        y,
+        z: Math.sin(angle) * radius
+      });
+    }
+  }
+
+  let rotation = 0;
+
+  function draw() {
+    ctx.clearRect(0, 0, width, height);
+
+    const cx = width / 2;
+    const cy = height / 2;
+    const radius = Math.min(width, height) * 0.36;
+
+    const cos = Math.cos(rotation);
+    const sin = Math.sin(rotation);
+
+    const projected = points.map(p => {
+      const x = p.x * cos - p.z * sin;
+      const z = p.x * sin + p.z * cos;
+
+      return {
+        x: cx + x * radius,
+        y: cy + p.y * radius,
+        z
+      };
+    });
+
+    // Globe connections
+    ctx.lineWidth = 0.6;
+
+    for (let i = 0; i < projected.length; i++) {
+      const a = projected[i];
+
+      for (let j = i + 1; j < projected.length; j++) {
+        const b = projected[j];
+        const dx = a.x - b.x;
+        const dy = a.y - b.y;
+
+        if (dx * dx + dy * dy < 125 &&
+            a.z > -0.15 && b.z > -0.15) {
+          ctx.strokeStyle = "rgba(0,190,255,0.16)";
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Glowing network nodes
+    projected.forEach(p => {
+      if (p.z < -0.15) return;
+
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, 1.5 + p.z, 0, Math.PI * 2);
+      ctx.fillStyle = "#38d9ff";
+      ctx.shadowBlur = 8;
+      ctx.shadowColor = "#00bfff";
+      ctx.fill();
+    });
+
+    ctx.shadowBlur = 0;
+
+    // Outer orbital ring
+    ctx.beginPath();
+    ctx.ellipse(cx, cy, radius * 1.3,
+      radius * 0.32, -0.2, 0, Math.PI * 2);
+    ctx.strokeStyle = "rgba(0,190,255,0.65)";
+    ctx.lineWidth = 1.2;
+    ctx.stroke();
+
+    rotation += 0.003;
+    animationId = requestAnimationFrame(draw);
+  }
+
+  const observer = new ResizeObserver(resize);
+  observer.observe(container);
+
+  resize();
+  draw();
+
+  window.addEventListener("pagehide", () => {
+    cancelAnimationFrame(animationId);
+    observer.disconnect();
+  }, { once: true });
+})();
+</script>
+<!-- END ANIMATED CYBER GLOBE -->
 </body>
 </html>
