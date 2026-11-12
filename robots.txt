@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kibeerer-bit.github.io/kibeere-academy/sitemap.xml
